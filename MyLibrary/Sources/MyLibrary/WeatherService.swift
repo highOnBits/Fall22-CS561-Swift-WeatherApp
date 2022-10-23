@@ -4,6 +4,8 @@ public protocol WeatherService {
     func getTemperature() async throws -> Int
 }
 
+
+
 public class WeatherServiceImpl: WeatherService {
     private let baseUrl: String
     private let city: String

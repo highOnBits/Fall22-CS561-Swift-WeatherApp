@@ -6,7 +6,7 @@ final class WeatherServiceImplTests: XCTestCase {
     func testweatherSeriveTest_canGetTemperature() async throws {
         // Given
         let temperatureToBeReturned = 38.9
-        let weatherServiceMockBaseUrl = "http://127.0.0.1:5000"
+        let weatherServiceMockBaseUrl = "https://weather-mock-server.herokuapp.com"
         let weatherSerivce = WeatherServiceImpl(baseUrl: weatherServiceMockBaseUrl)
         
         // When
@@ -20,7 +20,7 @@ final class WeatherServiceImplTests: XCTestCase {
     func testweatherSeriveTest_failedGetTemperatureError500() async throws {
         // Given
         let returnedErrorDescription = "Response status code was unacceptable: 500."
-        let weatherServiceMockBaseUrl = "http://127.0.0.1:5000"
+        let weatherServiceMockBaseUrl = "https://weather-mock-server.herokuapp.com"
         let weatherSerivce = WeatherServiceImpl(baseUrl: weatherServiceMockBaseUrl, city: "")
         var isErrorReturned: Bool
         var errorDescription = ""
